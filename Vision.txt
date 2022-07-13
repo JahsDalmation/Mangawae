@@ -1,0 +1,45 @@
+## Mangawae
+
+# The vision
+Mangawae is a completely free and open source project.
+	Once acquired the code can be used however you would like!
+	This means only the original source code cannot be changed.
+		(The code ACTUALLY on GitHub, not what you download)
+
+Mangawae is targeted at manga enthusiasts!
+
+Mangawae is able to:
+	Browse local and external manga.
+	Download external manga.
+
+	Being very simple in purpose and design, Mangawae is able to deliver 
+	not only great preformance but also a fantastic experience. One which
+	is free from bugs and errors!
+
+# The wae
+
+- = Menu
+! = Section
+
+! Welcome Message!
+	- Main Menu
+		- Local
+			! Browse
+				- Read
+				- Back
+		- External
+			- Browse
+				- Newest
+					- Download
+					- Back
+				- Hottest
+					- Download
+					- Back
+				- Latest
+					- Download
+					- Back
+				- Search
+					- Download
+					- Back
+				- Back
+		- Quit
