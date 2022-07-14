@@ -24,7 +24,7 @@ DEADLINE: <2022-07-17 Sun 00:00> SCHEDULED: <2022-07-14 Thu 00:00>
 ! Mangawae.py
 !! Main_Menu() / Main_Menu.py
 
-** TODO Main Menu [2/4]
+** TODO Main Menu [3/4]
 *** [ ] Local [0/2]
 SCHEDULED: <2022-07-15 Fri 16:00> DEADLINE: <2022-07-17 Sun 00:00>
 **** [ ] Browse
@@ -32,57 +32,50 @@ SCHEDULED: <2022-07-15 Fri 16:00> DEADLINE: <2022-07-17 Sun 00:00>
 
 **** [ ] Back
 
-*** [ ] External [0/4]
+*** [X] External [0/0]
 SCHEDULED: <2022-07-14 Thu 16:00> DEADLINE: <2022-07-15 Fri 00:00>
-**** [ ] Newest [0/2]
+**** [X] Newest [0/0]
 'Browse a selection of (default: 10) manga, chosen based on Newest'
 
-***** [ ] Select [/]
+***** [X] Select [0/0]
 Choose an avaliable manga and get details.
 
-****** [ ] Download [/]
-******* [ ] EP
-******* [ ] Final EP
-****** [ ] Back
+****** [X] Download [0/0]
+******* [X] EP
+******* [X] Final EP
+****** [X] Back
 
-***** [ ] Back
+***** [X] Back
 
-**** [ ] Hottest [0/2]
-Browse a selection of (default: 5) manga, chosen based on Newest!
+**** [X] Hottest [0/0]
+Browse a selection of (default: 5) manga, chosen based on Hottest!
 
-***** [ ] Select [0/2]
-****** [ ] Download [0/2]
-******* [ ] EP
-******* [ ] Final EP
-****** [ ] Back
+***** [X] Select [0/0]
+****** [X] Download [0/0]
+******* [X] EP
+******* [X] Final EP
+****** [X] Back
 
-***** [ ] Back
+***** [X] Back
 
-**** [ ] Latest [0/2]
-Browse a selection of (default: 5) manga, chosen based on Newest!
-***** [ ] Select [0/2]
-****** [ ] Download [0/2]
-******* [ ] EP
-******* [ ] Final EP
-****** [ ] Back
-***** [ ] Back
+**** [X] Latest [0/0]
+Browse a selection of (default: 5) manga, chosen based on Latest!
+***** [X] Select [0/0]
+****** [X] Download [0/0]
+******* [X] EP
+******* [X] Final EP
+****** [X] Back
+***** [X] Back
 
-**** [ ] Search [0/2]
+**** [X] Search [0/0]
 Scrape the manganato website for results matching the given string.
-***** [ ] Select [0/2]
-****** [ ] Download [0/2]
-******* [ ] EP
-******* [ ] Final EP
-****** [ ] Back
-***** [ ] Back
+***** [X] Select [0/0]
+****** [X] Download [0/0]
+******* [X] EP
+******* [X] Final EP
+****** [X] Back
+***** [X] Back
 *** [X] Help [0/0]
 **** [X] Dedicated and Interactive Help menu!
 DEADLINE: <2022-07-14 Thu 02:30> SCHEDULED: <2022-07-14 Thu 00:00>
 *** [X] Quit
-
-
-
-* An example entry into a file.
-** The purpose of this entry is to test: [2/2]
-+ [X] Staging
-+ [X] Commiting
