@@ -206,9 +206,27 @@ class MangaSearch:
                         Po = '%s' % page_counter
                     subprocess.run(["curl --silent --create-dirs --header 'Referer: https://readmanganato.com/' --output '/home/ghost/Manga/tmp/%s.jpg' '%s'" % (Po, page['src'])], shell=True)
                     page_counter += 1
-        
-                subprocess.run(['mkdir ~/Manga/%s/' % title.replace(' ','-')],
+
+
+                LsManga = subprocess.Popen(['ls', '~/Manga/'], text=True, stdout=PIPE)
+                WholeOutput = LsManga.communicate()
+                Output = WholeOutput[0]
+
+                ListMangas = Output.split('\n')
+                ListMangas.remove('tmp')
+                ListMangas.remove('')
+
+                DirNeeded = True
+                for Manga in ListMangas:
+                    if Manga == title.replace(' ','-'):
+                        DirNeeded = False
+
+                if DirNeeded:
+                    subprocess.run(['mkdir ~/Manga/%s/' % title.replace(' ','-')],
                                shell=True)
+
+
+
                 subprocess.run(['img2pdf ~/Manga/tmp/*.jpg --output ~/Manga/%s/%s.pdf'
                                 % (title.replace(' ','-'), chosen_chapter)], shell=True)
                 subprocess.run(["rm -rf ~/Manga/tmp/*"], shell=True)
