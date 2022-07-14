@@ -2,6 +2,7 @@ from Data_Checks import *
 import subprocess
 import requests
 from bs4 import BeautifulSoup
+from os.path import expanduser
 
 class MangaSearch:
 
@@ -158,6 +159,10 @@ class MangaSearch:
         print()
         
     def manga_download(self, link, title):
+        # Define Home
+        Home = expanduser('~')
+        ##
+
         scrape = requests.get(link).text 
         html = BeautifulSoup(scrape, 'lxml')
         chapter_list = html.find('div', class_='panel-story-chapter-list')
@@ -208,7 +213,7 @@ class MangaSearch:
                     page_counter += 1
 
                 # Directory Check
-                LsManga = subprocess.Popen(['ls', '~/Manga/'], text=True, stdout=subprocess.PIPE)
+                LsManga = subprocess.Popen(['ls', '%s/Manga/' % Home], text=True, stdout=subprocess.PIPE)
                 WholeOutput = LsManga.communicate()
                 Output = WholeOutput[0]
 
@@ -220,11 +225,11 @@ class MangaSearch:
                 for Manga in ListMangas:
                     if Manga == title.replace(' ','-'):
                         DirNeeded = False
+                ##
 
                 if DirNeeded:
                     subprocess.run(['mkdir ~/Manga/%s/' % title.replace(' ','-')],
                                shell=True)
-                ##
 
                 subprocess.run(['img2pdf ~/Manga/tmp/*.jpg --output ~/Manga/%s/%s.pdf'
                                 % (title.replace(' ','-'), chosen_chapter)], shell=True)
