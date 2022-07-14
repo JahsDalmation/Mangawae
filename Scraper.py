@@ -140,7 +140,6 @@ class MangaSearch:
             'latest',
             'search',
             'back',
-            'quit',
             ]
 
         mode_counter = 0
