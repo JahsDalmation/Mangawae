@@ -1,0 +1,81 @@
+#+title: Mangawae Org Mode
+#+DESCRIPTION: An org document to organize the Mangawae project!
+#+AUTHOR: Jah's Dalmation
+
+* Key
+
+'' = Description
+- = Implementation
+! = Function/File utilized
+!! = Function/File called
+
+* Mangawae
+DEADLINE: <2022-07-17 Sun 00:00> SCHEDULED: <2022-07-14 Thu 00:00>
+
+'Mangawae is a simple python based program, designed to search, download and
+    read manga! The Mangawae program will always begin with a warm welcome
+    message to great new users and if needed, provide help. The Mangawae
+    program itself will only be run once, however the menu's within are
+    designed to be looped'
+
+- Program start
+- Welcome message "Hello and Welcome to Mangawae!"
+- Main Menu
+! Mangawae.py
+!! Main_Menu() / Main_Menu.py
+
+** TODO Main Menu [2/4]
+*** [ ] Local [0/2]
+SCHEDULED: <2022-07-15 Fri 16:00> DEADLINE: <2022-07-17 Sun 00:00>
+**** [ ] Browse
+***** [ ] Read
+
+**** [ ] Back
+
+*** [ ] External [0/4]
+SCHEDULED: <2022-07-14 Thu 16:00> DEADLINE: <2022-07-15 Fri 00:00>
+**** [ ] Newest [0/2]
+'Browse a selection of (default: 10) manga, chosen based on Newest'
+
+***** [ ] Select [/]
+Choose an avaliable manga and get details.
+
+****** [ ] Download [/]
+******* [ ] EP
+******* [ ] Final EP
+****** [ ] Back
+
+***** [ ] Back
+
+**** [ ] Hottest [0/2]
+Browse a selection of (default: 5) manga, chosen based on Newest!
+
+***** [ ] Select [0/2]
+****** [ ] Download [0/2]
+******* [ ] EP
+******* [ ] Final EP
+****** [ ] Back
+
+***** [ ] Back
+
+**** [ ] Latest [0/2]
+Browse a selection of (default: 5) manga, chosen based on Newest!
+***** [ ] Select [0/2]
+****** [ ] Download [0/2]
+******* [ ] EP
+******* [ ] Final EP
+****** [ ] Back
+***** [ ] Back
+
+**** [ ] Search [0/2]
+Scrape the manganato website for results matching the given string.
+***** [ ] Select [0/2]
+****** [ ] Download [0/2]
+******* [ ] EP
+******* [ ] Final EP
+****** [ ] Back
+***** [ ] Back
+*** [X] Help [0/0]
+**** [X] Dedicated and Interactive Help menu!
+DEADLINE: <2022-07-14 Thu 02:30> SCHEDULED: <2022-07-14 Thu 00:00>
+*** [X] Quit

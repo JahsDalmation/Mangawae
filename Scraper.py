@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+from Data_Checks import *
+=======
+>>>>>>> 7519a2c (Initial import of program files!)
 import subprocess
 import requests
 from bs4 import BeautifulSoup
@@ -18,9 +22,14 @@ class MangaSearch:
 
     def __init__(self):
 
+<<<<<<< HEAD
+        # Print a nice warm welcome message to the MangaSearch class :)
+        welcome = 'What Manga would you like to read today?'
+=======
         # Print a nice warm welcome message :)
         #welcome = '[ Searching by: %s ]' % search_type
         welcome = 'Welcome!'
+>>>>>>> 7519a2c (Initial import of program files!)
         welcome_wrap = '-' * len(welcome)
         print('%s\n%s\n%s\n' % (welcome_wrap, welcome, welcome_wrap))
 
@@ -44,6 +53,10 @@ class MangaSearch:
             manga_block = html.find('div', class_='panel-content-genres')
             results = manga_block.find_all('a', 
                 class_='genres-item-name text-nowrap a-h')
+<<<<<<< HEAD
+            Error = False
+=======
+>>>>>>> 7519a2c (Initial import of program files!)
 
         if search_type == 'search':
 
@@ -52,6 +65,30 @@ class MangaSearch:
             scrape = requests.get(self.link).text 
             html = BeautifulSoup(scrape, 'lxml')
             manga_blocks = html.find('div', class_='panel-search-story')
+<<<<<<< HEAD
+            try:
+                results = manga_blocks.find_all('a',
+                                                class_="a-h text-nowrap item-title")
+                Error = False
+            except AttributeError:
+                Error = True
+
+        if Error != True:
+            counter = 0
+            x = 0
+            print()
+            for manga in results:
+                if x < 10:
+                    print('[ %s ] [ %s ]' %
+                          (counter,
+                           manga.text,
+                           ))
+                    counter += 1
+                x += 1
+            return results
+        elif Error:
+            return ''
+=======
             results = manga_blocks.find_all('a',
                 class_="a-h text-nowrap item-title")
 
@@ -67,6 +104,7 @@ class MangaSearch:
                 counter += 1
             x += 1
         return results
+>>>>>>> 7519a2c (Initial import of program files!)
 
     def manga_details(self, manga_link):
         scrape = requests.get(manga_link).text
@@ -116,7 +154,11 @@ class MangaSearch:
             'hottest',
             'latest',
             'search',
+<<<<<<< HEAD
+            'back',
+=======
             'quit',
+>>>>>>> 7519a2c (Initial import of program files!)
             ]
 
         mode_counter = 0
@@ -125,6 +167,17 @@ class MangaSearch:
             print('[ %s ] [ %s ]' % (mode_counter, modes[mode_counter]))
             mode_counter += 1
 
+<<<<<<< HEAD
+        Choosing = True
+        while Choosing:
+            mode = input('[ X ] > ')
+            valid = MenuCheck(mode, mode_counter)
+            if valid:
+                Choosing = False
+        return modes[int(mode)]
+        print()
+        
+=======
         mode = int(input('[ X ] > '))
         mode_counter = 0
         x = 0
@@ -142,10 +195,67 @@ class MangaSearch:
         manga = input('manga > ')
         return manga
    
+>>>>>>> 7519a2c (Initial import of program files!)
     def manga_download(self, link, title):
         scrape = requests.get(link).text 
         html = BeautifulSoup(scrape, 'lxml')
         chapter_list = html.find('div', class_='panel-story-chapter-list')
+<<<<<<< HEAD
+
+        if chapter_list == None:
+            print('Sorry the manga you have chosen does not seem to have any chapters!')
+            print('Here is the link just incase: [ %s ]' % link)
+
+        if chapter_list != None:
+            chapters = chapter_list.find_all('a', class_='chapter-name text-nowrap')
+
+            chapter_count = 0
+            for chapter in chapters:
+                chapter_count += 1
+
+
+            Choosing = True
+            while Choosing:
+                chosen_chapter = input('[ EP: 1 - %s ] > ' % chapter_count)
+                valid = MenuCheck(chosen_chapter, (chapter_count + 1))
+                if valid:
+                    Choosing = False
+
+            Choosing = True
+            while Choosing:
+                final_chapter = input('[ EP: %s -> X ] > ' % chosen_chapter)
+                valid = MenuCheck(final_chapter, (chapter_count + 1))
+                if valid:
+                    Choosing = False
+
+            while int(chosen_chapter) <= int(final_chapter):
+
+                chapter_link = chapters[chapter_count - int(chosen_chapter)]['href']
+                chapter_scrape = requests.get(chapter_link).text
+                chapter_html = BeautifulSoup(chapter_scrape, 'lxml')
+                chapter_pages = chapter_html.find('div', class_='container-chapter-reader')
+                pages = chapter_pages.find_all('img')
+
+                page_counter = 1
+                for page in pages:
+                    if page_counter < 10:
+                        Po = '00%s' % page_counter
+                    if page_counter < 100 and page_counter >= 10:
+                        Po = '0%s' % page_counter
+                    if page_counter >= 1000:
+                        Po = '%s' % page_counter
+                    subprocess.run(["curl --silent --create-dirs --header 'Referer: https://readmanganato.com/' --output '/home/ghost/Manga/tmp/%s.jpg' '%s'" % (Po, page['src'])], shell=True)
+                    page_counter += 1
+        
+                subprocess.run(['mkdir ~/Manga/%s/' % title.replace(' ','-')],
+                               shell=True)
+                subprocess.run(['img2pdf ~/Manga/tmp/*.jpg --output ~/Manga/%s/%s.pdf'
+                                % (title.replace(' ','-'), chosen_chapter)], shell=True)
+                subprocess.run(["rm -rf ~/Manga/tmp/*"], shell=True)
+
+                chosen_chapter = int(chosen_chapter)
+                chosen_chapter += 1
+=======
         chapters = chapter_list.find_all('a', class_='chapter-name text-nowrap')
 
         chapter_count = 0
@@ -203,3 +313,4 @@ while Mangaing:
         Mangaing = True
     else:
         print('sorry try again')
+>>>>>>> 7519a2c (Initial import of program files!)
