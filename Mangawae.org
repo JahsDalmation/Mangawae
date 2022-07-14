@@ -79,3 +79,10 @@ Scrape the manganato website for results matching the given string.
 **** [X] Dedicated and Interactive Help menu!
 DEADLINE: <2022-07-14 Thu 02:30> SCHEDULED: <2022-07-14 Thu 00:00>
 *** [X] Quit
+
+
+
+* An example entry into a file.
+** The purpose of this entry is to test: [0/2]
++ [ ] Staging
++ [ ] Commiting
