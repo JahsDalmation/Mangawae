@@ -1,5 +1,6 @@
 # Mangawae
-Mangawae is a simple python based program that can search, download and view manga!
+
+  Mangawae is a simple python based program that can search, download and view manga!
 
 # Installation
 
@@ -7,13 +8,13 @@ Mangawae is a simple python based program that can search, download and view man
   
     - curl
     - img2pdf
-    - Python 3+
+    - Python 3 (or newer)
    
   # Steps
   
     # Optional
-    
-    !!! If you do this step you MUST, where applicable, the adjust following commands       !!!
+      Not reccomended for new linux users.
+    !!! If you do this step you MUST, where applicable, adjust the following commands       !!!
     !!! If you do not understand, enter: cd      into a terminal and continue at # Required !!!
     
     - First start by moving into the directory you wish to install Mangawae into.
@@ -24,7 +25,7 @@ Mangawae is a simple python based program that can search, download and view man
             placed into the $HOME directory.
 
     # Required  
-    - Now clone the Mangawae repo.
+    - Clone the Mangawae repo.
         To do this use git clone:
           git clone https://github.com/JahsDalmation/Mangawae.git
           
@@ -38,6 +39,6 @@ Mangawae is a simple python based program that can search, download and view man
       For .zshrc :
         echo 'alias Mangawae="cd $HOME/Mangawae/ && python Mangawae.py && cd"' >> $HOME/.zshrc
         
-   # Usage
+# Usage
     
-      Mangawe
+  Mangawae
