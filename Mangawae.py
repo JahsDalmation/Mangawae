@@ -1,6 +1,5 @@
 from Scraper import *
 from Data_Checks import *
-<<<<<<< HEAD
 from Main_Menu import *
 from Help import InteractiveHelp
 
@@ -104,4 +103,3 @@ while Browsing:
             Mangaing = True
         else:
             print('sorry try again')
->>>>>>> 7519a2c (Initial import of program files!)
