@@ -83,6 +83,6 @@ DEADLINE: <2022-07-14 Thu 02:30> SCHEDULED: <2022-07-14 Thu 00:00>
 
 
 * An example entry into a file.
-** The purpose of this entry is to test: [0/2]
-+ [ ] Staging
-+ [ ] Commiting
+** The purpose of this entry is to test: [2/2]
++ [X] Staging
++ [X] Commiting
