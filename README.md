@@ -13,7 +13,7 @@
   # Steps
   
     # Optional
-      Not reccomended for new linux users.
+      This step is not reccomended for new linux users.
     !!! If you do this step you MUST, where applicable, adjust the following commands       !!!
     !!! If you do not understand, enter: cd      into a terminal and continue at # Required !!!
     
