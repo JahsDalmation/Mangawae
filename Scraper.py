@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 from Data_Checks import *
-=======
->>>>>>> 7519a2c (Initial import of program files!)
 import subprocess
 import requests
 from bs4 import BeautifulSoup
