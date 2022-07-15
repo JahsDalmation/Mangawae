@@ -41,7 +41,11 @@ class Browser:
 
         # Remove unwanted items (directories) from the MangaList list.
         #   Such as the tmp dir. (It is just used to download jpg's)
-        MangaList.remove('tmp')
+        try:
+            MangaList.remove('tmp')
+        except ValueError:
+            pass
+
         MangaList.remove('')
         ##
 
