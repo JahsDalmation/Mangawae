@@ -9,7 +9,8 @@
     - curl
     - img2pdf
     - Python 3 (or newer)
-   
+    - atril (pdf viewer) 
+  
   # Steps
   
     # Optional

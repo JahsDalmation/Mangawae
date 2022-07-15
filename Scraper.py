@@ -188,10 +188,17 @@ class MangaSearch:
 
             Choosing = True
             while Choosing:
-                final_chapter = input('[ EP: %s -> X ] > ' % chosen_chapter)
-                valid = MenuCheck(final_chapter, (chapter_count + 1))
-                if valid:
-                    Choosing = False
+                valid = False
+                while valid == False:
+                    final_chapter = input('[ EP: %s -> X ] > ' % chosen_chapter)
+                    valid = MenuCheck(final_chapter, (chapter_count + 1))
+                    if valid:
+                        if int(final_chapter) >= int(chosen_chapter):
+                            valid = True
+                            Choosing = False
+                        elif int(final_chapter) < int(chosen_chapter):
+                            valid = False
+                            print('Sorry, the final chapter must be greater than the first!')
 
             while int(chosen_chapter) <= int(final_chapter):
 
