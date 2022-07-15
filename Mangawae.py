@@ -2,6 +2,8 @@ from Scraper import *
 from Data_Checks import *
 from Main_Menu import *
 from Help import InteractiveHelp
+from os.path import expanduser
+from subprocess import Popen, PIPE, run
 
 MangaSearch = MangaSearch()
 Mangaing = True
