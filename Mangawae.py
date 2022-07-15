@@ -4,6 +4,7 @@ from Main_Menu import *
 from Help import InteractiveHelp
 from os.path import expanduser
 from subprocess import Popen, PIPE, run
+from Browser import *
 
 MangaSearch = MangaSearch()
 Mangaing = True
@@ -12,7 +13,30 @@ while Mangaing:
 
 ### LOCAL MODE BLOCK ###
     if Mode == 'Local':
-        print('Keeping it local!')
+
+        Local = Browser()
+
+        MangaList = Local.ListManga()
+
+        ChosenManga = Local.ChooseManga(MangaList)
+
+        Manga = MangaList[int(ChosenManga)]
+
+        ChosenChapter = Local.ChooseChapter(Manga)
+
+        ChosenChapter = int(ChosenChapter)
+        Reading = True
+        while Reading:
+            Local.ReadManga(Manga, ChosenChapter)
+
+            mode = Local.Menu()
+            if mode == 'Next':
+                ChosenChapter += 1
+            if mode == 'Previous':
+                ChosenChapter -= 1
+            if mode == 'Back':
+                Reading = False
+
 ### LOCAL MODE BLOCK ###
 
 ### EXTERNAL MODE BLOCK ###

@@ -127,17 +127,23 @@ class Browser:
               shell=True)
     ##
 
-# Test script
-Local = Browser()
+    def Menu(self):
 
-MangaList = Local.ListManga()
+        Modes = [
+            'Next',
+            'Previous',
+            'Back']
 
-ChosenManga = Local.ChooseManga(MangaList)
+        ModeCounter = 0
+        for mode in Modes:
+            print('[ %s ] [ %s ]' % (ModeCounter, mode))
+            ModeCounter += 1
 
-Manga = MangaList[int(ChosenManga)]
-
-ChosenChapter = Local.ChooseChapter(Manga)
-
-Local.ReadManga(Manga, ChosenChapter)
-
-#print(MangaList[int(ChosenManga)])
+        Choosing = True
+        while Choosing:
+            Mode = input('[ X ] > ')
+            valid = MenuCheck(Mode, ModeCounter)
+            if valid:
+                Choosing = False
+                LocalMode = Modes[int(Mode)]
+                return LocalMode

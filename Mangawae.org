@@ -24,13 +24,13 @@ DEADLINE: <2022-07-17 Sun 00:00> SCHEDULED: <2022-07-14 Thu 00:00>
 ! Mangawae.py
 !! Main_Menu() / Main_Menu.py
 
-** TODO Main Menu [3/4]
-*** [ ] Local [0/2]
+** TODO Main Menu [4/4]
+*** [X] Local [0/0]
 SCHEDULED: <2022-07-15 Fri 16:00> DEADLINE: <2022-07-17 Sun 00:00>
-**** [ ] Browse
-***** [ ] Read
+**** [X] Browse
+***** [X] Read
 
-**** [ ] Back
+**** [X] Back
 
 *** [X] External [0/0]
 SCHEDULED: <2022-07-14 Thu 16:00> DEADLINE: <2022-07-15 Fri 00:00>
